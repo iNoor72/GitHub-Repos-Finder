@@ -80,7 +80,7 @@ class HomeViewController: UIViewController, UITableViewDelegate {
                 cell.descriptionLabel.text = desc?.replacingCharacters(in: startIndex..<endIndex, with: "...")
             }
             else {
-                cell.descriptionLabel.text = repo.description
+                cell.descriptionLabel.text = repo.description ?? "No description"
             }
         }.disposed(by: disposeBag)
         
