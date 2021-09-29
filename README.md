@@ -4,7 +4,7 @@ This is try solving RippleEgypt's task, it's a Github Repos Finder that fetched 
 # The Task included:
 
 <ul>
-<li>Using Github API v3 to fetch repos from GET endpoind :"https://api.github.com/search/repositories?q=:query" with repo name instead of :query.</li>
+<li>Using Github API v3 to fetch repos from GET endpoint :"https://api.github.com/search/repositories?q=:query" with repo name instead of :query.</li>
 <li>Displaying the results in a TableView with custom TableViewCell.</li>
 <li>Using custom TableViewCell including the image of the user, repo's name, and the description (if found).</li>
 <li>API authentication using Github OAuth 2.0 Authentication.</li>
