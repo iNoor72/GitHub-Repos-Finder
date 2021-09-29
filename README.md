@@ -18,8 +18,8 @@ This is my try solving RippleEgypt's task, it's a Github Repos Finder that fetch
 <li>Alamofire</li>
 <li>Core Data (incomplete unfortunately, but will fix it later. )</li>
 <li>MVVM architecture</li>
-<li>Using DI (Dependency Injection) in multiple ways.</li>
-<li>Having 2 sources of data: Real Github API and a mocked local JSON files.</li>
-<li>Creating Unit tests for the project.</li>
+<li>DI (Dependency Injection) in multiple ways.</li>
+<li>Two sources of data: Real Github API and a mocked local JSON files.</li>
+<li>Unit tests for the project.</li>
 
 <ul/>
