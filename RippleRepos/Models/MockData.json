@@ -1,0 +1,30 @@
+{
+    "total_count": 3,
+    "items": [{
+        "full_name":"Noor/MockRepo1",
+        "owner":{
+            "login":"Noor El-Din",
+            "avatar_url":"https://shorturl.at/frFK0"
+        },
+        "description":"Mock description for repo 1",
+        "html_url":""
+    },
+    {
+        "full_name":"Noor/MockRepo2",
+        "owner":{
+            "login":"Walid",
+            "avatar_url":"https://shorturl.at/beV14"
+        },
+        "description":"Mock description for repo 2",
+        "html_url":""
+    },
+    {
+        "full_name":"Noor/MockRepo3",
+        "owner":{
+            "login":"Fathy",
+            "avatar_url":"https://shorturl.at/hqGOS"
+        },
+        "description":"Mock description for repo 3",
+        "html_url":""
+    }]
+}

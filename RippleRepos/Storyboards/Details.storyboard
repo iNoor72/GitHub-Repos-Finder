@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Details View Controller-->
+        <scene sceneID="gHX-zd-0Ae">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="QQI-jO-F2D" customClass="DetailsViewController" customModule="Ripple" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tKV-7J-rd4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-0X-2wn">
+                                <rect key="frame" x="82" y="76" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="OMq-8o-oxS"/>
+                                    <constraint firstAttribute="height" constant="250" id="Yr4-V1-04b"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSR-ra-IxL">
+                                <rect key="frame" x="16" y="342" width="382" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuX-db-xvU">
+                                <rect key="frame" x="16" y="407" width="382" height="30.333333333333314"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ak-ky-Z3Z">
+                                <rect key="frame" x="16" y="469.33333333333331" width="382" height="27.333333333333314"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enX-gU-KnG">
+                                <rect key="frame" x="8" y="552.66666666666663" width="398" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Open Repo on Github">
+                                    <color key="titleColor" red="0.066666666669999999" green="0.41960784309999999" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c2d-gL-VVb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HSR-ra-IxL" firstAttribute="leading" secondItem="c2d-gL-VVb" secondAttribute="leading" constant="16" id="SAW-oC-4Ub"/>
+                            <constraint firstItem="cyS-0X-2wn" firstAttribute="centerX" secondItem="tKV-7J-rd4" secondAttribute="centerX" id="SHV-2Z-qQX"/>
+                            <constraint firstItem="cyS-0X-2wn" firstAttribute="top" secondItem="c2d-gL-VVb" secondAttribute="top" constant="32" id="VAe-mG-KjP"/>
+                            <constraint firstItem="c2d-gL-VVb" firstAttribute="trailing" secondItem="MuX-db-xvU" secondAttribute="trailing" constant="16" id="WeV-7j-eEh"/>
+                            <constraint firstItem="9Ak-ky-Z3Z" firstAttribute="top" secondItem="MuX-db-xvU" secondAttribute="bottom" constant="32" id="Xax-dH-uJE"/>
+                            <constraint firstItem="c2d-gL-VVb" firstAttribute="trailing" secondItem="enX-gU-KnG" secondAttribute="trailing" constant="8" id="YA0-Rg-hxM"/>
+                            <constraint firstItem="9Ak-ky-Z3Z" firstAttribute="leading" secondItem="c2d-gL-VVb" secondAttribute="leading" constant="16" id="YmW-FQ-pXD"/>
+                            <constraint firstItem="MuX-db-xvU" firstAttribute="leading" secondItem="c2d-gL-VVb" secondAttribute="leading" constant="16" id="fVC-oM-OKC"/>
+                            <constraint firstItem="HSR-ra-IxL" firstAttribute="top" secondItem="cyS-0X-2wn" secondAttribute="bottom" constant="16" id="l6t-rX-OGh"/>
+                            <constraint firstItem="enX-gU-KnG" firstAttribute="top" secondItem="9Ak-ky-Z3Z" secondAttribute="bottom" constant="56" id="mG3-dN-1bG"/>
+                            <constraint firstItem="enX-gU-KnG" firstAttribute="leading" secondItem="c2d-gL-VVb" secondAttribute="leading" constant="8" id="t2L-hO-sS1"/>
+                            <constraint firstItem="c2d-gL-VVb" firstAttribute="trailing" secondItem="9Ak-ky-Z3Z" secondAttribute="trailing" constant="16" id="vu8-Dc-1pZ"/>
+                            <constraint firstItem="MuX-db-xvU" firstAttribute="top" secondItem="HSR-ra-IxL" secondAttribute="bottom" constant="32" id="wjc-CN-89J"/>
+                            <constraint firstItem="c2d-gL-VVb" firstAttribute="trailing" secondItem="HSR-ra-IxL" secondAttribute="trailing" constant="16" id="ytJ-kO-mUE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="9Ak-ky-Z3Z" id="c66-zQ-Im1"/>
+                        <outlet property="openRepoButton" destination="enX-gU-KnG" id="o2c-Bk-cVd"/>
+                        <outlet property="repoLabel" destination="MuX-db-xvU" id="ai5-ar-UGb"/>
+                        <outlet property="userImage" destination="cyS-0X-2wn" id="hWo-VZ-clW"/>
+                        <outlet property="usernameLabel" destination="HSR-ra-IxL" id="gzr-JC-qTT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h44-h5-IEY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1506" y="121"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
