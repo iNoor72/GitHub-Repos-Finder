@@ -40,6 +40,10 @@
 		7C7904DC2704E49000410853 /* OwnerModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7904D62704E49000410853 /* OwnerModel+CoreDataProperties.swift */; };
 		7C7904DD2704E49000410853 /* RepositoriesModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7904D72704E49000410853 /* RepositoriesModel+CoreDataClass.swift */; };
 		7C7904DE2704E49000410853 /* RepositoriesModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7904D82704E49000410853 /* RepositoriesModel+CoreDataProperties.swift */; };
+		7C7904E82704E65200410853 /* CoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7904E22704E65200410853 /* CoreDataManagerTests.swift */; };
+		7C7904E92704E65200410853 /* RealAPIFetchingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7904E42704E65200410853 /* RealAPIFetchingTest.swift */; };
+		7C7904EA2704E65200410853 /* MockAPIFetchingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7904E52704E65200410853 /* MockAPIFetchingTest.swift */; };
+		7C7904EB2704E65200410853 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7904E72704E65200410853 /* ViewModelTests.swift */; };
 		D7E4CFD6D65344EDE2E8586E /* Pods_RippleRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB5A6E31084D29EB1D6A2A8 /* Pods_RippleRepos.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +104,10 @@
 		7C7904D62704E49000410853 /* OwnerModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OwnerModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7C7904D72704E49000410853 /* RepositoriesModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesModel+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7C7904D82704E49000410853 /* RepositoriesModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7C7904E22704E65200410853 /* CoreDataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTests.swift; sourceTree = "<group>"; };
+		7C7904E42704E65200410853 /* RealAPIFetchingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealAPIFetchingTest.swift; sourceTree = "<group>"; };
+		7C7904E52704E65200410853 /* MockAPIFetchingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAPIFetchingTest.swift; sourceTree = "<group>"; };
+		7C7904E72704E65200410853 /* ViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		99CCF233D535669A8DA242A2 /* Pods-RippleRepos-RippleReposUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RippleRepos-RippleReposUITests.debug.xcconfig"; path = "Target Support Files/Pods-RippleRepos-RippleReposUITests/Pods-RippleRepos-RippleReposUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A02BB2F357B665233A8B6E8A /* Pods_RippleReposTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RippleReposTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C16FC47AD204A7DA8FCF58C0 /* Pods-RippleRepos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RippleRepos.release.xcconfig"; path = "Target Support Files/Pods-RippleRepos/Pods-RippleRepos.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +186,9 @@
 		7C7904892704E39500410853 /* RippleReposTests */ = {
 			isa = PBXGroup;
 			children = (
+				7C7904E32704E65200410853 /* API-Fetching */,
+				7C7904E12704E65200410853 /* CoreData */,
+				7C7904E62704E65200410853 /* ViewModels */,
 				7C79048A2704E39500410853 /* RippleReposTests.swift */,
 			);
 			path = RippleReposTests;
@@ -195,12 +206,7 @@
 		7C7904A32704E42400410853 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7C7904D32704E49000410853 /* RepoModel+CoreDataClass.swift */,
-				7C7904D42704E49000410853 /* RepoModel+CoreDataProperties.swift */,
-				7C7904D52704E49000410853 /* OwnerModel+CoreDataClass.swift */,
-				7C7904D62704E49000410853 /* OwnerModel+CoreDataProperties.swift */,
-				7C7904D72704E49000410853 /* RepositoriesModel+CoreDataClass.swift */,
-				7C7904D82704E49000410853 /* RepositoriesModel+CoreDataProperties.swift */,
+				7C7904EC2704ED7600410853 /* CoreDataModels */,
 				7C7904A42704E42400410853 /* Repositories.swift */,
 				7C7904A52704E42400410853 /* CoreDataModel.xcdatamodeld */,
 				7C7904A72704E42400410853 /* MockData.json */,
@@ -264,6 +270,44 @@
 				7C7904CD2704E46300410853 /* RepoCell.xib */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7C7904E12704E65200410853 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7C7904E22704E65200410853 /* CoreDataManagerTests.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7C7904E32704E65200410853 /* API-Fetching */ = {
+			isa = PBXGroup;
+			children = (
+				7C7904E42704E65200410853 /* RealAPIFetchingTest.swift */,
+				7C7904E52704E65200410853 /* MockAPIFetchingTest.swift */,
+			);
+			path = "API-Fetching";
+			sourceTree = "<group>";
+		};
+		7C7904E62704E65200410853 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7C7904E72704E65200410853 /* ViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7C7904EC2704ED7600410853 /* CoreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				7C7904D32704E49000410853 /* RepoModel+CoreDataClass.swift */,
+				7C7904D42704E49000410853 /* RepoModel+CoreDataProperties.swift */,
+				7C7904D52704E49000410853 /* OwnerModel+CoreDataClass.swift */,
+				7C7904D62704E49000410853 /* OwnerModel+CoreDataProperties.swift */,
+				7C7904D72704E49000410853 /* RepositoriesModel+CoreDataClass.swift */,
+				7C7904D82704E49000410853 /* RepositoriesModel+CoreDataProperties.swift */,
+			);
+			path = CoreDataModels;
 			sourceTree = "<group>";
 		};
 		B5267C441F0B90300128EABD /* Pods */ = {
@@ -560,6 +604,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C7904EA2704E65200410853 /* MockAPIFetchingTest.swift in Sources */,
+				7C7904E92704E65200410853 /* RealAPIFetchingTest.swift in Sources */,
+				7C7904EB2704E65200410853 /* ViewModelTests.swift in Sources */,
+				7C7904E82704E65200410853 /* CoreDataManagerTests.swift in Sources */,
 				7C79048B2704E39500410853 /* RippleReposTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

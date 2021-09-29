@@ -2,8 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qNJ-KS-6gd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +12,7 @@
         <!--Github Repo Finder-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="Ripple" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="RippleRepos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="139" width="414" height="723"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewRepoCell" rowHeight="60" id="b4k-jW-pix" customClass="RepoCell" customModule="Ripple" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewRepoCell" rowHeight="60" id="b4k-jW-pix" customClass="RepoCell" customModule="RippleRepos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b4k-jW-pix" id="Eem-CP-ruU">
@@ -41,31 +41,29 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P31-yD-i03">
                                 <rect key="frame" x="0.0" y="139" width="414" height="723"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTX-hA-aFZ">
-                                        <rect key="frame" x="176" y="351" width="62" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="oTX-hA-aFZ" firstAttribute="centerY" secondItem="P31-yD-i03" secondAttribute="centerY" id="JgL-zF-7S3"/>
-                                    <constraint firstItem="oTX-hA-aFZ" firstAttribute="centerX" secondItem="P31-yD-i03" secondAttribute="centerX" id="WSR-dh-rd1"/>
-                                </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="psO-As-2uZ">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="R2y-hj-xgJ"/>
+                                    <constraint firstAttribute="width" constant="50" id="u42-g8-9x1"/>
+                                </constraints>
+                                <color key="color" name="AccentColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="P31-yD-i03" firstAttribute="top" secondItem="xRb-5a-XFX" secondAttribute="bottom" id="3s3-QK-bhz"/>
                             <constraint firstItem="8rg-tw-P1e" firstAttribute="centerY" secondItem="xRb-5a-XFX" secondAttribute="centerY" id="6fs-Xc-3bP"/>
+                            <constraint firstItem="psO-As-2uZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AKx-nL-FqH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P31-yD-i03" secondAttribute="bottom" id="Eno-la-w1y"/>
                             <constraint firstItem="xRb-5a-XFX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Gvl-L7-v0B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uHa-70-FAl" secondAttribute="bottom" id="O7z-C8-vpP"/>
                             <constraint firstItem="xRb-5a-XFX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sni-gI-5a1"/>
                             <constraint firstItem="P31-yD-i03" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TbQ-vI-PRg"/>
+                            <constraint firstItem="psO-As-2uZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vp8-hf-JnF"/>
                             <constraint firstItem="8rg-tw-P1e" firstAttribute="leading" secondItem="xRb-5a-XFX" secondAttribute="trailing" constant="8" id="W4o-5L-2WQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P31-yD-i03" secondAttribute="trailing" id="Y53-2h-mWP"/>
                             <constraint firstItem="uHa-70-FAl" firstAttribute="top" secondItem="xRb-5a-XFX" secondAttribute="bottom" id="cgh-cf-O3g"/>
@@ -78,13 +76,14 @@
                     <connections>
                         <outlet property="emptyView" destination="P31-yD-i03" id="VZC-Li-fnV"/>
                         <outlet property="fetchButton" destination="8rg-tw-P1e" id="Fnl-Ib-Wmt"/>
+                        <outlet property="loadingIndicator" destination="psO-As-2uZ" id="eB2-eR-vxS"/>
                         <outlet property="searchBar" destination="xRb-5a-XFX" id="edE-Dg-7wU"/>
                         <outlet property="tableView" destination="uHa-70-FAl" id="wNb-N0-fb0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="707" y="130"/>
+            <point key="canvasLocation" x="705.79710144927537" y="129.91071428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xcs-kF-iW5">
@@ -106,6 +105,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

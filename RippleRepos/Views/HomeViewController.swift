@@ -11,10 +11,11 @@ import RxCocoa
 
 class HomeViewController: UIViewController, UITableViewDelegate {
     
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var fetchButton: UIButton!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var emptyView: UIView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var fetchButton: UIButton!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var emptyView: UIView!
+    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
     
     let homeViewModel = HomeViewModel()
     private let disposeBag = DisposeBag()
@@ -23,6 +24,7 @@ class HomeViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         searchBar.layer.cornerRadius = 12.0
         fetchButton.layer.cornerRadius = 12.0
+        loadingIndicator.isHidden = true
         bindSearchBarToViewModel()
         subscribeToFetchButton()
         naviagteToRepo()
@@ -48,7 +50,11 @@ class HomeViewController: UIViewController, UITableViewDelegate {
     func subscribeToFetchButton() {
         fetchButton.rx.tap.subscribe(onNext: {[weak self] _ in
             guard let self = self else { return }
-            let _ = self.homeViewModel.getData(for: self.homeViewModel.repoNameBehavior.value)
+            self.homeViewModel.getData(for: self.homeViewModel.repoNameBehavior.value) {
+                [weak self] _ in
+                self?.loadingIndicator.isHidden = false
+                self?.loadingIndicator.startAnimating()
+            }
             
             self.updateTableView()
         }).disposed(by: disposeBag)
@@ -59,6 +65,9 @@ class HomeViewController: UIViewController, UITableViewDelegate {
         homeViewModel.reposModelObservable.bind(to: tableView.rx.items(cellIdentifier: Constants.customCellID, cellType: RepoCell.self)) {[weak self]
             index, repo, cell in
             self?.emptyView.isHidden = true
+            self?.loadingIndicator.isHidden = true
+            self?.loadingIndicator.stopAnimating()
+            
             cell.backgroundColor = (index%2 == 0 ? UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1) : UIColor(white: 0.6, alpha: 1))
             cell.userImage.image = self?.homeViewModel.fetchUserImage(url: repo.owner.imageURL)
             cell.usernameLabel.text = repo.owner.name

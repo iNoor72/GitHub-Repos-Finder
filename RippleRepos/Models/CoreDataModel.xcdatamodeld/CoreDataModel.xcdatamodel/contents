@@ -5,6 +5,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="RepoModel" representedClassName=".RepoModel" syncable="YES">
+        <attribute name="githubLink" optional="YES" attributeType="String"/>
         <attribute name="owner" optional="YES" attributeType="Transformable"/>
         <attribute name="repoDescription" optional="YES" attributeType="String"/>
         <attribute name="repoPath" optional="YES" attributeType="String"/>
@@ -16,7 +17,7 @@
     </entity>
     <elements>
         <element name="OwnerModel" positionX="-36" positionY="9" width="128" height="59"/>
-        <element name="RepoModel" positionX="-54" positionY="-9" width="128" height="89"/>
+        <element name="RepoModel" positionX="-54" positionY="-9" width="128" height="104"/>
         <element name="RepositoriesModel" positionX="-63" positionY="-18" width="128" height="59"/>
     </elements>
 </model>

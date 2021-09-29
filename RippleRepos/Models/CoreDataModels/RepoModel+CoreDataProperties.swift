@@ -19,6 +19,7 @@ extension RepoModel {
     @NSManaged public var owner: OwnerModel?
     @NSManaged public var repoDescription: String?
     @NSManaged public var repoPath: String?
+    @NSManaged public var githubLink: String?
     @NSManaged public var repoOwner: OwnerModel?
 
 }

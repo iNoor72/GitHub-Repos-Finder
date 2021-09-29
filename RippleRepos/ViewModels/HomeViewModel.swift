@@ -30,8 +30,8 @@ class HomeViewModel {
         self.databaseManager = CoreDataManager.shared
     }
     
-    func getData(for repoName:String) -> Repositories{
-        var returnedObject = Repositories(total_count: 0, items: [Repo]())
+    func getData(for repoName:String, completion: @escaping (Repositories?) -> ()){
+        var returnedObject : Repositories?
         apiService.fetch(for: repoName) {[weak self] (reposObject: Repositories?, error) in
             if let error = error {
                 print("There was an error fetching your data from the API. Error is: \(error.localizedDescription)")
@@ -49,9 +49,10 @@ class HomeViewModel {
                 else {
                     print("There's no new data")
                 }
+                returnedObject = safeReposObject
             }
         }
-        return returnedObject
+        completion(returnedObject)
     }
     
     //Used when using the custom cell to fetch user's Image
