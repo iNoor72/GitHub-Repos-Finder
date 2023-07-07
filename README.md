@@ -1,4 +1,4 @@
-# RippleRepos
+# GitHub-Repos-Finder
 This is my try solving RippleEgypt's task, it's a Github Repos Finder that fetched Github repositories based on the user's input for a repo name, it lists all of the repos with the specified query name with a limit of 50 repos.
 
 # The Task included:
